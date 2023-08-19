@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:udemy_project/controllers/count_controller.dart';
 
+import '../controllers/counter_controller.dart';
 import 'other.dart';
 
 class HomeScreen extends StatelessWidget {
