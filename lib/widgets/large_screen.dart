@@ -5,9 +5,20 @@ class LargeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      constraints: BoxConstraints.expand(),
-      color: Colors.red,
+    return Row(
+      children: [
+        Expanded(
+          child: Container(
+            color: Colors.red,
+          ),
+        ),
+        Expanded(
+          flex: 5,
+          child: Container(
+            color: Colors.blue,
+          ),
+        ),
+      ],
     );
   }
 }
