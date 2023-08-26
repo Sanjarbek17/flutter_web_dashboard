@@ -33,7 +33,11 @@ class SideMenu extends StatelessWidget {
                       child: Image.asset("assets/icons/logo.png"),
                     ),
                     const Flexible(
-                      child: CustomText(text: "Dash", size: 20, weight: FontWeight.bold, color: Colors.blue),
+                      child: CustomText(
+                          text: "Dash",
+                          size: 20,
+                          weight: FontWeight.bold,
+                          color: Colors.blue),
                     ),
                     SizedBox(width: width / 48),
                   ],
@@ -47,7 +51,9 @@ class SideMenu extends StatelessWidget {
             children: sideMenuItems
                 .map(
                   (itemName) => SideMenuItem(
-                    itemName: itemName == AuthenticationPageRoute ? "Log Out" : itemName,
+                    itemName: itemName == AuthenticationPageRoute
+                        ? "Log Out"
+                        : itemName,
                     onTap: () {
                       if (itemName == AuthenticationPageRoute) {
                         // TODO: go to authentication page

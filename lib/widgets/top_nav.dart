@@ -4,7 +4,8 @@ import '../constants/style.dart';
 import '../helpers/responsive.dart';
 import 'custom_text.dart';
 
-AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) => AppBar(
+AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
+    AppBar(
       leading: !ResponsiveWidget.isSmallScreen(context)
           ? Row(
               children: [
@@ -24,7 +25,11 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) => A
           children: [
             Visibility(
               visible: !ResponsiveWidget.isSmallScreen(context),
-              child: CustomText(text: "Dash", color: lightGrey, size: 20, weight: FontWeight.bold),
+              child: CustomText(
+                  text: "Dash",
+                  color: lightGrey,
+                  size: 20,
+                  weight: FontWeight.bold),
             ),
             Expanded(child: Container()),
             IconButton(
@@ -44,7 +49,10 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) => A
                     width: 12,
                     height: 12,
                     padding: const EdgeInsets.all(4),
-                    decoration: BoxDecoration(color: active, borderRadius: BorderRadius.circular(30), border: Border.all(color: light, width: 2)),
+                    decoration: BoxDecoration(
+                        color: active,
+                        borderRadius: BorderRadius.circular(30),
+                        border: Border.all(color: light, width: 2)),
                   ),
                 )
               ],
@@ -54,9 +62,13 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) => A
             CustomText(text: "Santos Enoque", color: lightGrey),
             const SizedBox(width: 16),
             Container(
-              decoration: BoxDecoration(color: active.withOpacity(.5), borderRadius: BorderRadius.circular(30)),
+              decoration: BoxDecoration(
+                  color: active.withOpacity(.5),
+                  borderRadius: BorderRadius.circular(30)),
               child: Container(
-                decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(30)),
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(30)),
                 padding: const EdgeInsets.all(2),
                 margin: const EdgeInsets.all(2),
                 child: CircleAvatar(
@@ -70,5 +82,5 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) => A
       ),
       iconTheme: IconThemeData(color: dark),
       elevation: 0,
-      backgroundColor: light,
+      backgroundColor: Colors.transparent,
     );
