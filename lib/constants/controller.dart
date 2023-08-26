@@ -1,3 +1,5 @@
-import 'package:udemy_project/controllers/menu_controller.dart';
+import '../controllers/menu_controller.dart';
+import '../controllers/navigation_controller.dart';
 
-MenuController menuController = MenuController.instance;
+MenuControler menuController = MenuControler.instance;
+NavigationController navigationController = NavigationController.instance;

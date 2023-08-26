@@ -70,5 +70,5 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) => A
       ),
       iconTheme: IconThemeData(color: dark),
       elevation: 0,
-      backgroundColor: Colors.transparent,
+      backgroundColor: light,
     );

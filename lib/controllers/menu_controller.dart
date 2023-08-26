@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 import '../constants/style.dart';
 import '../routing/routes.dart';
 
-class MenuController extends GetxController {
-  static MenuController instance = Get.find();
+class MenuControler extends GetxController {
+  static MenuControler instance = Get.find();
   var activeItem = OverViewPageRoute.obs;
   var hoverItem = "".obs;
 
@@ -13,12 +13,12 @@ class MenuController extends GetxController {
     activeItem.value = itemName;
   }
 
-  onHover(String itemName) {
+  void onHover(String itemName) {
     if (!isActive(itemName)) hoverItem.value = itemName;
   }
 
-  isActive(String itemName) => activeItem.value = itemName;
-  isHovering(String itemName) => activeItem.value = itemName;
+  bool isActive(String itemName) => activeItem.value == itemName;
+  bool isHovering(String itemName) => hoverItem.value == itemName;
 
   Widget returnIconFor(String itemName) {
     switch (itemName) {
